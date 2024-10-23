@@ -849,7 +849,7 @@
 .burger-menu {
     position: relative;
     display: none;
-    z-index: 2;
+    z-index: 3;
 }
 
 .burger-menu-content {
