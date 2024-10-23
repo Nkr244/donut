@@ -123,7 +123,7 @@
 .main-screen-item .title {
     font-family: 'Tavolga', sans-serif;
     font-style: normal;
-    font-weight: 700v;
+    font-weight: 900;
     font-size: 70px;
     line-height: 120%;
     text-transform: uppercase;
@@ -389,7 +389,7 @@
     font-style: normal;
     font-weight: 400;
     font-size: 32px;
-    line-height: 100%;
+    line-height: 115%;
     text-align: center;
 }
 
@@ -560,7 +560,7 @@
 .article-title {
     font-family: 'Tavolga', sans-serif;
     font-style: normal;
-    font-weight: 400;
+    font-weight: 700;
     font-size: 22px;
     line-height: 120%;
     text-transform: uppercase;
@@ -1394,4 +1394,89 @@
     .main-screen-item .package {
         right: 0;
     }
+}
+
+.quality {
+    position: relative;
+    background-image: url("assets/img/quality-bg.svg");
+    background-repeat: repeat;
+    background-size: cover;
+    background-position: center center;
+    padding-top: 48px;
+    padding-bottom: 82px;
+}
+
+.quality .bread-crumbs {
+    color: var(--brown);
+    margin-bottom: 20px;
+    font-size: 20px;
+    line-height: 20px;
+}
+
+.quality h1 {
+    font-family: 'Tavolga', sans-serif;
+    font-size: 70px;
+    line-height: 70px;
+    text-transform: uppercase;
+    margin-bottom: 85px;
+    color: var(--red);
+    font-weight: 700;
+}
+
+.quality-content {
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+}
+
+.quality-block {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 95px;
+}
+
+.quality-item {
+    position: relative;
+    flex-basis: 50%;
+}
+
+.quality-item h2 {
+    font-family: 'Tavolga', sans-serif;
+    font-size: 48px;
+    line-height: 48px;
+    color: var(--red);
+    margin-bottom: 16px;
+}
+
+.quality-item p {
+    font-size: 20px;
+    line-height: 28px;
+    color: var(--brown);
+}
+
+.quality-item img {
+    max-width: 680px;
+    max-height: 440px;
+    border-radius: 20px;
+    object-fit: none;
+    object-position: -255px -390px;
+    width: 100%;
+}
+
+.quality-block:nth-child(odd) .quality-item:last-child img {
+    transform: rotate(5deg);
+}
+
+.quality-block:nth-child(odd) .quality-item:last-child .clip {
+    position: absolute;
+    top: -88px;
+    right: 160px;
+    width: 166px;
+    height: 198px;
+    object-position: center;
+    border-radius: unset;
+    object-fit: cover;
+    transform: rotate(10deg);
+    z-index: 2;
 }
