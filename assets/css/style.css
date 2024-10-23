@@ -1214,6 +1214,15 @@
 }
 
 @media screen and (max-width: 768px) {
+    .recipes-content-images-item img {
+        width: 250px;
+    }
+
+    .recipes-content-images-item p {
+        font-size: 16px;
+        line-height: 20px;
+    }
+
     .footer-logo {
         margin-bottom: 35px;
         width: 186px;
