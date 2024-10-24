@@ -1448,14 +1448,14 @@
     padding-bottom: 82px;
 }
 
-.quality .bread-crumbs {
+.bread-crumbs {
     color: var(--brown);
     margin-bottom: 20px;
     font-size: 20px;
     line-height: 20px;
 }
 
-.quality h1 {
+h1 {
     font-family: 'Tavolga', sans-serif;
     font-size: 70px;
     line-height: 70px;
@@ -1731,31 +1731,39 @@
 }
 
 .recipes-page h1 {
+    position: relative;
     font-family: Tavolga, sans-serif;
     font-size: 70px;
     line-height: 70px;
     color: var(--red);
     text-transform: uppercase;
     margin-bottom: 20px;
+    z-index: 1;
 }
 
 .recipes-page .description {
+    position: relative;
     color: var(--brown);
     font-size: 20px;
     line-height: 28px;
     text-align: center;
     max-width: 926px;
     margin: 0 auto 52px;
+    z-index: 1;
 }
 
 .recipes-page .recipes-content-images {
+    position: relative;
     overflow: visible;
     flex-wrap: wrap;
+    z-index: 1;
 }
 
 .recipes-page .recipes-content-video {
+    position: relative;
     overflow: hidden;
     flex-wrap: wrap;
+    z-index: 1;
 }
 
 .recipes-page .recipes-content-images-item {
@@ -1781,14 +1789,22 @@
     gap: 50px;
 }
 
+.recipes-content-active {
+    position: relative;
+    z-index: 1;
+}
+
 .fast-filters {
+    position: relative;
     display: flex;
     flex-wrap: wrap;
     gap: 20px;
     margin-bottom: 44px;
+    z-index: 1;
 }
 
 .fast-filters-item {
+    position: relative;
     font-family: 'Tavolga', sans-serif;
     display: flex;
     align-items: center;
@@ -1803,6 +1819,7 @@
     padding: 0 20px;
     border: 1px solid var(--brown);
     cursor: pointer;
+    z-index: 1;
 }
 
 .fast-filters-item.active {
@@ -1815,9 +1832,87 @@
     margin-bottom: 48px;
 }
 
+.recipes-page .two-hearth,
+.recipes-page .cake,
+.recipes-page .notepad,
+.recipes-page .donut,
+.recipes-page .mitten,
+.recipes-page .hearth,
+.recipes-page .pretzel,
+.recipes-page .bagel,
+.recipes-page .second-donut {
+    position: absolute;
+    z-index: 0;
+}
+
+.recipes-page .two-hearth path,
+.recipes-page .cake path,
+.recipes-page .notepad path,
+.recipes-page .donut path,
+.recipes-page .mitten path,
+.recipes-page .hearth path,
+.recipes-page .pretzel path,
+.recipes-page .bagel path,
+.recipes-page .second-donut path {
+    fill: var(--orange-1);
+}
+
+.recipes-page .two-hearth {
+    top: 0;
+    left: 0;
+}
+
+.recipes-page .cake {
+    top: 0;
+    right: 0;
+}
+
+.recipes-page .notepad {
+    top: 387px;
+    left: -250px;
+}
+
+.recipes-page .donut {
+    top: 800px;
+    right: -125px;
+}
+
+.recipes-page .mitten {
+    top: 52%;
+    left: -100px;
+}
+
+.recipes-page .hearth {
+    transform: rotate(50deg);
+    top: 65%;
+    right: -125px;
+}
+
+.recipes-page .pretzel {
+    transform: rotate(-30deg);
+    bottom: 20%;
+    left: -21%;
+}
+
+.recipes-page .bagel {
+    bottom: -2%;
+    right: -13%;
+    z-index: 0;
+}
+
+.recipes-page .second-donut {
+    bottom: -1.5%;
+    left: -5%;
+    z-index: 0;
+}
+
 @media screen and (max-width: 1076px) {
     .recipes-page .recipes-content-video .recipes-content-video-item {
         flex-basis: calc(33% - 45px);
+    }
+
+    .recipes-page .recipes-content-video {
+        padding: 0 40px;
     }
 
     .recipes-page .bread-crumbs {
@@ -1852,6 +1947,72 @@
         line-height: 16px;
         max-width: 200px;
     }
+
+    .recipes-page {
+        padding-top: 100px;
+    }
+
+    .recipes-page .page-logo {
+        top: -15px;
+        width: 60px;
+    }
+
+    .recipes-page .two-hearth {
+        top: -144px;
+        width: 64px;
+        left: 12px;
+    }
+
+    .recipes-page .cake {
+        top: -177px;
+        width: 75px;
+        right: 14px;
+    }
+
+    .recipes-page .notepad {
+        top: 387px;
+        left: -500px;
+    }
+
+    .recipes-page .donut {
+        top: 371px;
+        right: -15px;
+        width: 70px;
+    }
+
+    .recipes-page .mitten {
+        top: 31%;
+        left: -29px;
+        width: 92px;
+    }
+
+    .recipes-page .hearth {
+        transform: rotate(-11deg);
+        top: 42.5%;
+        left: -18px;
+        width: 70px;
+    }
+
+    .recipes-page .pretzel {
+        transform: rotate(-30deg);
+        top: 13.8%;
+        left: -21%;
+    }
+
+    .recipes-page .bagel {
+        top: 18.8%;
+        right: -19%;
+        z-index: 0;
+        width: 140px;
+    }
+
+    .recipes-page .second-donut {
+        top: 36.3%;
+        right: -40px;
+        left: auto;
+        z-index: 0;
+        width: 90px;
+    }
 }
 
 @media screen and (max-width: 550px) {
@@ -1859,6 +2020,7 @@
         flex-basis: 100%;
         max-width: 100%;
     }
+
     .recipes-page .recipes-content-video .recipes-content-video-item .video {
         max-width: 100%;
     }
@@ -1871,8 +2033,235 @@
         flex-basis: 100%;
         max-width: 100%;
     }
+
     .recipes-page .recipes-content-images-item img {
         width: 100%;
     }
 }
 
+.recipes-page-item {
+    padding-top: 50px;
+}
+
+.recipes-page-item h1 {
+    margin-bottom: 27px;
+}
+
+.recipes-page-info {
+    display: flex;
+    gap: 40px;
+    margin-bottom: 100px;
+}
+
+.recipes-page-info-item {
+    flex-basis: 50%;
+}
+
+.recipes-page-info-item img {
+    max-width: 640px;
+    width: 100%;
+    border-radius: 20px;
+}
+
+.recipes-page-info-list p {
+    font-style: normal;
+    font-weight: 600;
+    font-size: 24px;
+    line-height: 100%;
+    text-transform: uppercase;
+    color: #661B00;
+    margin-bottom: 12px;
+}
+
+
+.recipes-page-info-list ul {
+    padding-left: 20px;
+    margin-bottom: 32px;
+}
+
+
+.recipes-page-info-list ul li {
+    color: var(--red);
+}
+
+
+.recipes-page-info-list ul li span {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 100%;
+    color: #661B00;
+}
+
+.recipes-page-info:before {
+    position: absolute;
+    content: '';
+    top: -715px;
+    right: -291px;
+    width: 100%;
+    height: 111%;
+    background: url(../img/bg-precipes-page-item.svg) no-repeat center;
+    z-index: -1;
+}
+
+.recipes-page-steps {
+    display: flex;
+    flex-direction: column;
+    gap: 150px;
+}
+
+.recipes-page-step {
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    gap: 225px;
+}
+
+.recipes-page-step-block {
+    position: relative;
+    flex-basis: 50%;
+}
+
+.recipes-page-step-block h2 {
+    font-family: 'Tavolga', sans-serif;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 48px;
+    line-height: 100%;
+    text-transform: uppercase;
+    color: #E2211C;
+    margin-bottom: 16px;
+}
+
+.recipes-page-step-block p {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 140%;
+    color: #661B00;
+}
+
+.recipes-page-step-block img {
+    max-width: 493px;
+    width: 100%;
+    border-radius: 20px;
+}
+
+.recipes-page-step:nth-child(odd) .recipes-page-step-block img {
+    transform: rotate(5deg);
+}
+
+.recipes-page-step:nth-child(even) {
+    flex-direction: row-reverse;
+}
+
+.recipes-page-step:nth-child(even) .recipes-page-step-block {
+    text-align: right;
+}
+
+.recipes-page-step:nth-child(even) .recipes-page-step-block img {
+    transform: rotate(-5deg);
+}
+
+.recipes-page-item .hearth path,
+.recipes-page-item .second-hearth path {
+    fill: #FFC079;
+}
+
+.recipes-page-item .hearth,
+.recipes-page-item .second-hearth {
+    position: absolute;
+    z-index: -1;
+    transform: rotate(75deg);
+    right: 20px;
+}
+
+.recipes-page-item .second-hearth {
+    top: 36%;
+    z-index: 1;
+}
+
+.recipes-page-step:first-child:before {
+    position: absolute;
+    content: '';
+    bottom: -25px;
+    left: 45%;
+    right: auto;
+    margin: 0 auto;
+    background: url("../img/arrow-recipes.svg") no-repeat center;
+    width: 135px;
+    height: 135px;
+}
+
+.recipes-page-step:nth-child(2):before {
+    position: absolute;
+    content: '';
+    bottom: -150px;
+    left: 45%;
+    right: auto;
+    margin: 0 auto;
+    background: url("../img/arrow-recipes.svg") no-repeat center;
+    width: 135px;
+    height: 135px;
+    transform: rotate(80deg);
+}
+
+.recipes-page-step:first-child .recipes-page-step-block .clip {
+    position: absolute;
+    top: -90px;
+    right: 28%;
+    width: 166px;
+    height: 200px;
+    z-index: 2;
+    transform: rotate(11deg) !important;
+}
+
+.recipes-page-step:nth-child(2) .recipes-page-step-block .clip {
+    position: absolute;
+    top: -91px;
+    right: 46%;
+    width: 166px;
+    height: 200px;
+    z-index: 2;
+    transform: rotate(1deg) !important;
+}
+
+.recipes-page-step:last-child .recipes-page-step-block .clip {
+    position: absolute;
+    top: -99px;
+    right: 39%;
+    width: 166px;
+    height: 200px;
+    z-index: 2;
+    transform: rotate(11deg) !important;
+}
+
+.other-block {
+    position: relative;
+}
+.recipes-page-content {
+    margin-bottom: 60px;
+}
+.other-block:before {
+    position: absolute;
+    content: "";
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: url(../../assets/img/bg-recipes.svg) no-repeat center;
+    background-size: 100%;
+    clip-path: inset(-100% 0 30px 0);
+    z-index: -1;
+}
+.other-block h2 {
+    font-family: 'Tavolga', sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 64px;
+    line-height: 65px;
+    text-transform: uppercase;
+    color: #E2211C;
+    margin-bottom: 66px;
+}
