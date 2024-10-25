@@ -11,13 +11,13 @@
 <div class="wrapper overflow-hidden">
     <div class="header">
         <div class="container d-flex items-center content-between">
-            <img src="assets/img/logo.png" alt="логотип">
+            <a href="/"><img src="assets/img/logo.png" alt="логотип"></a>
             <ul class="list-desktop">
                 <li><a href="">Пышное качество</a></li>
-                <li><a href="">Рецепты</a></li>
-                <li><a href="">Статьи</a></li>
-                <li><a href="">Контакты</a></li>
-                <li><a href="">Где купить</a></li>
+                <li><a href="/recipes.html">Рецепты</a></li>
+                <li><a href="/articles.html">Статьи</a></li>
+                <li><a href="/contact.html">Контакты</a></li>
+                <li><a href="/#to-buy">Где купить</a></li>
             </ul>
             <div class="burger">
                 <div class="burger-menu">
@@ -51,10 +51,10 @@
                               fill="#FFC079"/>
                     </svg>
                     <ul>
-                        <li>Пышное качество</li>
-                        <li>Рецепты</li>
-                        <li>Статьи</li>
-                        <li>Контакты</li>
+                        <li><a href="">Пышное качество</a></li>
+                        <li><a href="/recipes.html">Рецепты</a></li>
+                        <li><a href="/articles.html">Статьи</a></li>
+                        <li><a href="/contact.html">Контакты</a></li>
                     </ul>
                 </div>
             </div>
@@ -575,7 +575,7 @@
             <a class="button-red" href="">все статьи</a>
         </div>
     </section>
-    <section class="to-buy">
+    <section id="to-buy" class="to-buy">
         <svg class="to-buy-icon" width="170" height="170" viewBox="0 0 170 170" fill="none"
              xmlns="http://www.w3.org/2000/svg">
             <circle cx="85.0002" cy="85" r="67.069" transform="rotate(18.6569 85.0002 85)" fill="#E2211C"/>
@@ -710,7 +710,7 @@
         });
     });
 
-    const burgerMenu = document.querySelector('.burger')
+    const burgerMenu = document.querySelector('.burger-menu')
 
     burgerMenu.addEventListener('click', () => {
         burgerMenu.toggleAttribute('open')
