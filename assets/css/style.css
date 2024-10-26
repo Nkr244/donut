@@ -2073,17 +2073,19 @@ h1 {
     margin-bottom: 12px;
 }
 
-
 .recipes-page-info-list ul {
     padding-left: 20px;
     margin-bottom: 32px;
 }
 
-
 .recipes-page-info-list ul li {
     color: var(--red);
+    margin-bottom: 8px;
 }
 
+.recipes-page-info-list ul li:last-child {
+    margin-bottom: 0;
+}
 
 .recipes-page-info-list ul li span {
     font-style: normal;
@@ -3082,8 +3084,9 @@ h1 {
     color: #661B00;
     padding-left: 25px;
 }
+
 .custom-file-upload:before {
- position: absolute;
+    position: absolute;
     content: '';
     top: 0;
     left: 0;
@@ -3103,6 +3106,7 @@ h1 {
     cursor: pointer;
     margin-top: 20px;
 }
+
 .policy {
     font-style: normal;
     font-weight: 400;
@@ -3116,11 +3120,13 @@ h1 {
     .contact {
         margin-bottom: 60px;
     }
+
     .contact .description {
         font-size: 16px;
         line-height: 22px;
         margin-bottom: 25px;
     }
+
     .contact h1 {
         margin-bottom: 12px;
     }
@@ -3130,12 +3136,14 @@ h1 {
         line-height: 24px;
         margin-bottom: 20px;
     }
+
     .contact-form form .button-red {
         margin-top: 10px;
         height: 52px;
         font-size: 16px;
         line-height: 100%;
     }
+
     .policy {
         font-size: 14px;
         line-height: 14px;
@@ -3145,5 +3153,104 @@ h1 {
 @media screen and (max-width: 500px) {
     .contact-form form .form-block {
         flex-direction: column;
+    }
+}
+
+.about-button {
+    border: none;
+    cursor: pointer;
+}
+
+.about-modal {
+    position: fixed;
+    top: 200%;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 10;
+    transition: top .5s;
+}
+
+.about-modal.open {
+    top: 0;
+}
+
+.about-modal-content {
+    position: relative;
+    transform: translateY(50%);
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 32px;
+    max-width: 932px;
+    min-height: 448px;
+    border-radius: 20px;
+    border: 4px var(--orange-2) solid;
+    padding: 40px;
+    background: white;
+    margin: 0 auto;
+    transition: transform .5s;
+}
+
+.about-modal-item img {
+    width: 300px;
+    height: 368px;
+    object-fit: cover;
+    border-radius: 20px;
+}
+
+.about-modal-item h2 {
+    font-family: 'Tavolga', sans-serif;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 40px;
+    line-height: 120%;
+    text-transform: uppercase;
+    color: #E2211C;
+    margin-bottom: 20px;
+}
+
+.about-modal-item p {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 140%;
+    color: #661B00;
+}
+
+.close-modal {
+    position: absolute;
+    top: 5px;
+    right: 5px;
+    cursor: pointer;
+}
+
+.close-modal path {
+    fill: var(--orange-1);
+}
+
+@media screen and (max-width: 950px) {
+    .about-modal.open {
+        overflow-y: auto;
+    }
+
+    .about-modal-content {
+        transform: translateY(0);
+        flex-direction: column;
+    }
+
+    .about-modal-item img {
+        width: 100%;
+    }
+
+    .about-modal-item h2 {
+        font-size: 32px;
+        margin-bottom: 10px;
+    }
+
+    .about-modal-item p {
+        font-size: 16px;
     }
 }
