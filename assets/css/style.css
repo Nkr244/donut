@@ -1115,14 +1115,40 @@
         padding: 0 60px;
     }
 }
+.to-buy .title {
+    display: block;
+    margin: 0 auto 32px;
+}
 
 @media screen and (max-width: 768px) {
+
+    .to-buy .title {
+        display: none;
+    }
+
+    .to-buy .title-mobile {
+        display: block;
+        margin: 0 auto 20px;
+    }
+    .articles .title-mobile {
+        margin-bottom: 115px;
+        display: block;
+    }
+
+    .recipes .title-mobile
+    {
+        display: block;
+        margin-bottom: 20px;
+    }
+
     .main-screen-item .title-mobile {
         position: relative;
         display: block;
         margin: 0 auto 20px;
     }
 
+    .recipes .title,
+    .articles .title,
     .main-screen-item .title {
         display: none;
         font-size: 36px;
