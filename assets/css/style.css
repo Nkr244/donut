@@ -1115,6 +1115,7 @@
         padding: 0 60px;
     }
 }
+
 .to-buy .title {
     display: block;
     margin: 0 auto 32px;
@@ -1130,13 +1131,13 @@
         display: block;
         margin: 0 auto 20px;
     }
+
     .articles .title-mobile {
         margin-bottom: 115px;
         display: block;
     }
 
-    .recipes .title-mobile
-    {
+    .recipes .title-mobile {
         display: block;
         margin-bottom: 20px;
     }
@@ -1481,6 +1482,10 @@
     line-height: 20px;
 }
 
+.quality .title {
+    margin-bottom: 85px;
+}
+
 h1 {
     font-family: 'Tavolga', sans-serif;
     font-size: 70px;
@@ -1621,7 +1626,29 @@ h1 {
     left: -200px;
 }
 
+.quality-item .title {
+    border-radius: 0;
+}
+
 @media screen and (max-width: 1076px) {
+    .quality .title,
+    .quality .quality-item .title {
+        display: none;
+    }
+
+    .quality .quality-item .title-mobile {
+        display: block;
+        margin-bottom: 4px;
+        margin-left: 0;
+        border-radius: 0;
+        width: auto;
+    }
+
+    .quality .title-mobile {
+        display: block;
+        margin: 0 auto 28px;
+    }
+
     .quality-block,
     .quality-block:nth-child(even) {
         flex-direction: column;
@@ -1734,6 +1761,77 @@ h1 {
     background: #FFDFBC;
     padding-top: 160px;
     padding-bottom: 80px;
+}
+
+.recipes-page .title {
+    display: block;
+    margin: 0 auto 20px;
+}
+
+.recipes-page-item .title {
+    margin-bottom: 27px;
+    display: block;
+}
+
+.recipes-page-step-block .title {
+    display: block;
+    margin-bottom: 16px;
+    transform: unset !important;
+    width: auto;
+    border-radius: 0;
+}
+
+.contact .title {
+    display: block;
+    margin-bottom: 20px;
+}
+
+.contact .title-mobile {
+    display: none;
+    margin-bottom: 44px;
+}
+
+.title-mobile-comment {
+    margin: 0 0 12px 0 !important;
+}
+
+@media screen and (max-width: 1076px) {
+    .recipes-page-item .title,
+    .recipes-page .title {
+        display: none;
+    }
+
+    .recipes-page .title-mobile {
+        display: block;
+        margin: 0 auto 16px;
+    }
+
+    .recipes-page-item .title-mobile {
+        margin-bottom: 20px;
+        display: block;
+    }
+
+    .recipes-page-step-block .title {
+        display: none;
+    }
+
+    .recipes-page-step-block .title-mobile {
+        display: block;
+        margin-bottom: 8px;
+        transform: unset !important;
+        width: auto;
+        border-radius: 20px;
+    }
+
+    .contact .title {
+        display: none;
+    }
+
+    .contact .title-mobile {
+        display: block;
+        margin: 0 auto 20px;
+    }
+
 }
 
 .recipes-page .page-logo {
@@ -3278,5 +3376,258 @@ h1 {
 
     .about-modal-item p {
         font-size: 16px;
+    }
+}
+
+.modal-video {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    margin: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, .5);
+    z-index: 10;
+}
+
+.modal-video.active {
+    display: flex;
+}
+
+.modal-video-block {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    max-width: 542px;
+    margin: 0 auto;
+}
+
+.modal-video-content {
+    position: relative;
+    transform: translateY(10%);
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    max-width: 542px;
+    width: 100%;
+    min-height: 752px;
+    justify-content: end;
+    border-radius: 20px;
+    padding-bottom: 27px;
+    overflow: hidden;
+}
+
+.modal-video-content:before {
+    position: absolute;
+    content: '';
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(180deg, rgba(0, 0, 0, 0.02) 0%, rgba(0, 0, 0, 0.3) 100%);
+    z-index: 0;
+}
+
+.modal-video-content video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -1;
+}
+
+.modal-video-content p {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 20px;
+    text-transform: uppercase;
+    color: #FFFFFF;
+    text-align: left;
+    padding-left: 16px;
+    z-index: 2;
+}
+
+.modal-video-content span {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 20px;
+    color: #FFDFBC;
+    padding-left: 16px;
+    z-index: 2;
+}
+
+.close-video {
+    position: absolute;
+    top: 65px;
+    right: -65px;
+    width: 60px;
+    height: 60px;
+    cursor: pointer;
+}
+
+.modal-video-content .description {
+    display: none;
+    overflow-y: auto;
+    color: white;
+    font-size: 20px;
+    line-height: 20px;
+    padding: 64px 16px;
+    margin-bottom: 0;
+    z-index: 2;
+}
+
+.modal-video-content .description h3 {
+    font-weight: normal;
+    text-transform: uppercase;
+    margin-bottom: 20px;
+}
+
+.modal-video-content .description p {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 20px;
+    padding-left: 0;
+    text-transform: unset;
+}
+
+.modal-video-content .description .title {
+    padding-left: 0;
+    margin-bottom: 11px;
+    text-transform: unset;
+}
+
+.modal-video-content .description ul {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 20px;
+    padding-left: 20px;
+    margin-bottom: 20px;
+}
+
+
+.video-controls {
+    display: none;
+    position: absolute;
+    bottom: 10px;
+    left: 10px;
+    right: 10px;
+    align-items: center;
+    gap: 10px;
+}
+
+.video-controls.active {
+    display: none;
+}
+
+.play-pause-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-466%) translateX(-50%);
+    left: 50%;
+    background: transparent;
+    border: none;
+    color: white;
+    font-size: 24px;
+    cursor: pointer;
+}
+
+.progress-bar {
+    width: 100%;
+    -webkit-appearance: none;
+    appearance: none;
+    height: 6px;
+    border-radius: 5px;
+    cursor: pointer;
+    background: rgba(255, 255, 255, 0.2);
+}
+
+input[type="range"] {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 100%;
+    height: 6px;
+    background: linear-gradient(to right, white var(--value, 0%), rgba(255, 255, 255, 0.2) var(--value, 50%));
+
+    border-radius: 5px;
+    outline: none;
+    cursor: pointer;
+}
+
+input[type="range"]::-webkit-slider-runnable-track {
+    background: linear-gradient(to right, white var(--value, 0%), rgba(255, 255, 255, 0.2) var(--value, 50%));
+    height: 6px;
+    border-radius: 5px;
+}
+
+input[type="range"]::-moz-range-track {
+    background: white;
+    height: 6px;
+    border-radius: 5px;
+}
+
+input[type="range"]::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 20px;
+    height: 20px;
+    background: white;
+    border-radius: 50%;
+    transform: translateY(-6px);
+}
+
+input[type="range"]::-moz-range-thumb {
+    width: 20px;
+    height: 20px;
+    background: white;
+    border-radius: 50%;
+    border: none;
+}
+
+@media (hover: hover) and (pointer: fine) {
+    .modal-video-content:hover .video-controls {
+        display: flex;
+    }
+}
+
+@media (hover: none) and (pointer: coarse) {
+    .video-controls.active {
+        display: flex;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .modal-video-content .description {
+        padding: 64px 16px 0;
+    }
+
+    .modal-video-content p {
+        padding: 0 16px;
+    }
+
+    .modal-video-block {
+        max-width: 100%;
+        overflow-y: auto;
+    }
+
+    .close-video {
+        top: 14px;
+        right: 14px;
+        z-index: 3;
+    }
+
+    .modal-video-content {
+        transform: translateY(0%);;
+        max-width: 100%;
+        width: 100%;
+        min-height: 100%;
+        border-radius: 0;
     }
 }

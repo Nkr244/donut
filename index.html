@@ -13,8 +13,11 @@
         <div class="container d-flex items-center content-between">
             <div class="about-modal">
                 <div class="about-modal-content">
-                    <svg class="close-modal" width="28" height="28" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg">
-                        <path fill-rule="evenodd" clip-rule="evenodd" d="M4.11 2.697L2.698 4.11 6.586 8l-3.89 3.89 1.415 1.413L8 9.414l3.89 3.89 1.413-1.415L9.414 8l3.89-3.89-1.415-1.413L8 6.586l-3.89-3.89z" fill="#000"></path>
+                    <svg class="close-modal" width="28" height="28" viewBox="0 0 16 16"
+                         xmlns="http://www.w3.org/2000/svg">
+                        <path fill-rule="evenodd" clip-rule="evenodd"
+                              d="M4.11 2.697L2.698 4.11 6.586 8l-3.89 3.89 1.415 1.413L8 9.414l3.89 3.89 1.413-1.415L9.414 8l3.89-3.89-1.415-1.413L8 6.586l-3.89-3.89z"
+                              fill="#000"></path>
                     </svg>
                     <div class="about-modal-item">
                         <img src="assets/img/recipes-item.png" alt="">
@@ -382,7 +385,7 @@
                       fill="#FFDFBC"/>
             </svg>
 
-<!--            <h2 class="title">рецепты</h2>-->
+            <!--            <h2 class="title">рецепты</h2>-->
             <img class="title" src="assets/img/recipes-title.svg" alt="title">
             <img class="title-mobile" src="assets/img/recipes-title-mobile.svg" alt="title-mobile">
             <p class="description">
@@ -396,6 +399,7 @@
                     <button class="btn-active btn-active-video active">видеоРецепты</button>
                 </div>
                 <div class="recipes-content-video active">
+
                     <div class="recipes-content-video-item">
                         <div class="video">
                             <video width="100%" height="400px" src="assets/video/eat.mp4"
@@ -405,32 +409,73 @@
                             Пирожки с курицей, овощами и сыром
                         </p>
                     </div>
-                    <div class="recipes-content-video-item">
-                        <div class="video">
-                            <video width="100%" height="400px" src="assets/video/eat.mp4"
-                                   poster="assets/video/poster.png"></video>
+                    <div class="modal-video">
+                        <div class="modal-video-block">
+                            <svg class="close-video" width="60" height="60" viewBox="0 0 60 60" fill="none"
+                                 xmlns="http://www.w3.org/2000/svg">
+                                <path d="M30 33.5L17.75 45.75C17.2917 46.2083 16.7083 46.4375 16 46.4375C15.2917 46.4375 14.7083 46.2083 14.25 45.75C13.7917 45.2917 13.5625 44.7083 13.5625 44C13.5625 43.2917 13.7917 42.7083 14.25 42.25L26.5 30L14.25 17.75C13.7917 17.2917 13.5625 16.7083 13.5625 16C13.5625 15.2917 13.7917 14.7083 14.25 14.25C14.7083 13.7917 15.2917 13.5625 16 13.5625C16.7083 13.5625 17.2917 13.7917 17.75 14.25L30 26.5L42.25 14.25C42.7083 13.7917 43.2917 13.5625 44 13.5625C44.7083 13.5625 45.2917 13.7917 45.75 14.25C46.2083 14.7083 46.4375 15.2917 46.4375 16C46.4375 16.7083 46.2083 17.2917 45.75 17.75L33.5 30L45.75 42.25C46.2083 42.7083 46.4375 43.2917 46.4375 44C46.4375 44.7083 46.2083 45.2917 45.75 45.75C45.2917 46.2083 44.7083 46.4375 44 46.4375C43.2917 46.4375 42.7083 46.2083 42.25 45.75L30 33.5Z"
+                                      fill="white"/>
+                            </svg>
+                            <div class="modal-video-content">
+
+                                <video width="100%" height="100%" src="assets/video/eat.mp4"
+                                       poster="assets/video/poster.png"></video>
+                                <div class="description">
+                                    <h3>Пирожки с курицей, овощами и сыром</h3>
+                                    <p class="title">
+                                        Ингредиенты
+                                    </p>
+                                    <ul>
+                                        <li>250 г муки</li>
+                                        <li>4 яйца</li>
+                                        <li>150 г сахара</li>
+                                        <li>140 г сливочного маргарина «Пышка»</li>
+                                        <li>60 мл молока</li>
+                                        <li>1 лимон</li>
+                                        <li>1 ч. л. разрыхлителя для теста</li>
+                                    </ul>
+                                    <p class="title">
+                                        Рецепт
+                                    </p>
+                                    <p>Шаг 1</p>
+                                    <p style="margin-bottom: 20px;">
+                                        Хруст печенья, воздушная текстура бисквита, пышность сдобы - за все это отвечают
+                                        жиры в вашей выпечке. Для отличного результата их должно быть больше 70%. Именно
+                                        поэтому Пышка - маргарин 72% жирности. С ним у вас всегда будет удачная выпечка.
+                                    </p>
+                                    <p>
+                                        Шаг 2
+                                    </p>
+                                    <p style="margin-bottom: 20px;">На вкус вашей выпечки сильно влияет и качество сырья в выбранном масле или
+                                        маргарине: для Пышки мы используем только высококачественные растительные масла,
+                                        а также тщательно следим за процессом его обработки, чтобы ничего не помешало
+                                        вам создавать настоящие кондитерские шедевры.</p>
+                                    <p>Шаг 3</p>
+                                    <p style="margin-bottom: 20px;">Благодаря маргарину Пышка, каждая хозяйка может создавать на своей кухне
+                                        настоящие кулинарные шедевры! Выпечка на основе Пышки равномерно поднимается и
+                                        пропекается, структура получается нежной и пористой, бисквит упругим, пышным,
+                                        таящим во рту с тонкой, хрустящей корочкой.</p>
+                                </div>
+                                <p class="modal-video-title">
+                                    Пирожки с курицей, овощами и сыром
+                                </p>
+                                <span class="read-more">
+                                    Читать рецепт
+                                </span>
+
+                                <div class="video-controls">
+                                    <button class="play-pause-btn">
+                                        <svg width="80" height="80" viewBox="0 0 80 80" fill="none"
+                                             xmlns="http://www.w3.org/2000/svg">
+                                            <rect width="80" height="80" rx="40" fill="black" fill-opacity="0.5"/>
+                                            <rect x="26" y="20" width="10" height="40" rx="4" fill="white"/>
+                                            <rect x="44" y="20" width="10" height="40" rx="4" fill="white"/>
+                                        </svg>
+                                    </button>
+                                    <input type="range" class="progress-bar" value="0" max="100">
+                                </div>
+                            </div>
                         </div>
-                        <p>
-                            Медовые пирожные со сливочным кремом
-                        </p>
-                    </div>
-                    <div class="recipes-content-video-item">
-                        <div class="video">
-                            <video width="100%" height="400px" src="assets/video/eat.mp4"
-                                   poster="assets/video/poster.png"></video>
-                        </div>
-                        <p>
-                            Клубничные капкейки
-                        </p>
-                    </div>
-                    <div class="recipes-content-video-item">
-                        <div class="video">
-                            <video width="100%" height="400px" src="assets/video/eat.mp4"
-                                   poster="assets/video/poster.png"></video>
-                        </div>
-                        <p>
-                            Медовые пирожные со сливочным кремом
-                        </p>
                     </div>
                 </div>
                 <div class="recipes-content-images">
@@ -547,7 +592,7 @@
             </svg>
 
 
-<!--            <h2 class="title">статьи</h2>-->
+            <!--            <h2 class="title">статьи</h2>-->
             <img class="title" src="assets/img/articles-title.svg" alt="title">
             <img class="title-mobile" src="assets/img/articles-title-mobile.svg" alt="title-mobile">
             <div class="articles-content splide">
@@ -629,7 +674,7 @@
             </defs>
         </svg>
         <div class="container">
-<!--            <h2>ГДЕ КУПИТЬ</h2>-->
+            <!--            <h2>ГДЕ КУПИТЬ</h2>-->
             <img class="title" src="assets/img/to-buy-title.svg" alt="title">
             <img class="title-mobile" src="assets/img/to-buy-title-mobile.svg" alt="title-mobile">
             <div class="to-buy-content">
@@ -735,14 +780,99 @@
     })
 
     const videoItems = document.querySelectorAll('.recipes-content-video-item');
-
+    const modal = document.querySelector('.modal-video');
+    const closeModal = document.querySelector('.close-video');
+    const modalVideo = modal.querySelector('video');
+    const playPauseBtn = modal.querySelector('.play-pause-btn');
+    const progressBar = modal.querySelector('.progress-bar');
+    const videoControls = modal.querySelector('.video-controls');
+    const readMoreButton = modal.querySelector('.read-more');
+    const description = modal.querySelector('.description');
+    const modalTitle = modal.querySelector('.modal-video-content > p')
 
     videoItems.forEach((item) => {
         item.addEventListener('click', () => {
-            const video = item.querySelector('video');
-            video.play();
-            item.classList.add('play-disabled')
+            modal.classList.add('active');
+            modalVideo.play();
+            updatePlayPauseIcon();
+            resetProgress();
         });
+    });
+
+    closeModal.addEventListener('click', () => {
+        modal.classList.remove('active');
+        modalVideo.pause();
+        modalVideo.currentTime = 0;
+        resetProgress();
+    });
+
+    function updatePlayPauseIcon() {
+        if (modalVideo.paused) {
+            playPauseBtn.innerHTML = `
+            <svg width="80" height="80" viewBox="0 0 80 80" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <rect width="80" height="80" rx="40" fill="black" fill-opacity="0.5"/>
+                <path d="M59.5 35.6699C62.8333 37.5944 62.8333 42.4056 59.5 44.3301L34 59.0526C30.6667 60.9771 26.5 58.5714 26.5 54.7224L26.5 25.2776C26.5 21.4286 30.6667 19.0229 34 20.9474L59.5 35.6699Z" fill="white"/>
+            </svg>
+        `;
+        } else {
+            playPauseBtn.innerHTML = `
+            <svg width="80" height="80" viewBox="0 0 80 80" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <rect width="80" height="80" rx="40" fill="black" fill-opacity="0.5"/>
+                <rect x="26" y="20" width="10" height="40" rx="4" fill="white"/>
+                <rect x="44" y="20" width="10" height="40" rx="4" fill="white"/>
+            </svg>
+        `;
+        }
+    }
+
+    function resetProgress() {
+        progressBar.value = 0;
+        progressBar.style.background = 'linear-gradient(to right, white 0%, rgba(255, 255, 255, 0.2) 0%)';
+    }
+
+    playPauseBtn.addEventListener('click', () => {
+        if (modalVideo.paused) {
+            modalVideo.play();
+        } else {
+            modalVideo.pause();
+        }
+        updatePlayPauseIcon();
+    });
+
+    modalVideo.addEventListener('timeupdate', () => {
+        const progress = (modalVideo.currentTime / modalVideo.duration) * 100;
+        progressBar.value = progress;
+        progressBar.style.background = `linear-gradient(to right, white ${progress}%, rgba(255, 255, 255, 0.2) ${progress}%)`;
+    });
+
+    progressBar.addEventListener('input', () => {
+        modalVideo.currentTime = (progressBar.value / 100) * modalVideo.duration;
+    });
+
+    modalVideo.addEventListener('click', () => {
+        if (window.matchMedia('(hover: none) and (pointer: coarse)').matches) {
+            videoControls.classList.toggle('active');
+        }
+    });
+
+    modal.addEventListener('touchstart', () => {
+        videoControls.classList.toggle('active');
+    });
+
+    readMoreButton.addEventListener('click', () => {
+        const isDescriptionVisible = description.style.display === 'block';
+
+        description.style.display = isDescriptionVisible ? 'none' : 'block';
+
+        readMoreButton.textContent = isDescriptionVisible ? 'Читать рецепт' : 'Скрыть рецепт';
+
+        if (isDescriptionVisible) {
+            videoControls.classList.remove('active');
+            modalTitle.style.display = 'block';
+        } else {
+            videoControls.classList.add('active');
+            modalTitle.style.display = 'none';
+        }
     });
 
     const burgerMenu = document.querySelector('.burger-menu')
@@ -754,10 +884,10 @@
     const buttonAbout = document.querySelector('.about-button')
     const buttonCloseAbout = document.querySelector('.close-modal')
 
-    buttonAbout.addEventListener('click', ()=> {
+    buttonAbout.addEventListener('click', () => {
         document.querySelector('.about-modal').classList.add('open')
     })
-    buttonCloseAbout.addEventListener('click', ()=> {
+    buttonCloseAbout.addEventListener('click', () => {
         document.querySelector('.about-modal').classList.remove('open')
     })
 </script>
