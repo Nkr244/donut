@@ -935,7 +935,12 @@
     width: 100%;
 }
 
-@media screen and (max-width: 1110px) {
+html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 75px;
+}
+
+@media screen and (max-width: 1300px) {
     .header .list-desktop {
         display: none;
     }
