@@ -536,6 +536,7 @@
 }
 
 .articles .title {
+    position: relative;
     font-family: 'Tavolga', sans-serif;
     font-style: normal;
     font-weight: 700;
@@ -544,6 +545,7 @@
     text-transform: uppercase;
     color: #FFFFFF;
     margin-bottom: 115px;
+    z-index: 1;
 }
 
 .articles-content {
@@ -1209,10 +1211,12 @@ html {
     }
 
     .articles .button-red {
+        position: relative;
         width: 188px;
         height: 52px;
         font-size: 16px;
         line-height: 16px;
+        z-index: 1;
     }
 
     .articles .title {
@@ -1439,7 +1443,7 @@ html {
         width: 58px;
         height: 48px;
         bottom: 253px;
-        left: 7px;
+        left: 7px !important;
     }
 
     .main-screen .dynamic-item.bagel {
@@ -3727,17 +3731,20 @@ input[type="range"]::-moz-range-thumb {
     .footer .footer-phone .email {
         font-size: 14px;
     }
+
     .footer .footer-phone .email:before {
         top: -4px;
         left: 11%;
     }
 }
+
 @media screen and (max-height: 850px) {
     .modal-video-content {
         transform: translateY(0);
         min-height: auto;
         height: 100%;
     }
+
     .close-video {
         top: 0;
     }
@@ -3746,5 +3753,139 @@ input[type="range"]::-moz-range-thumb {
 @media screen and (max-height: 560px) {
     .play-pause-btn {
         transform: translateY(-300%) translateX(-50%);
+    }
+}
+
+@media screen and (max-width: 1668px) {
+    .main-screen .dynamic-item.bagel {
+        right: -167px;
+    }
+
+    .recipes .bun {
+        left: -200px;
+    }
+
+    .recipes .mitten {
+        left: -115px;
+    }
+
+    .articles-big-hearth {
+        right: -140px;
+    }
+
+    .article-ring {
+        left: -35px;
+    }
+
+    .article-fill-ring {
+        left: -45px;
+    }
+
+    .article-ring {
+        left: -40px;
+    }
+}
+
+@media screen and (max-width: 1550px) {
+    .main-screen .dynamic-item.bagel {
+        right: -100px;
+    }
+
+    .recipes .board {
+        right: -100px;
+    }
+
+    .recipes .croissant {
+        left: -110px;
+    }
+
+    .recipes .bun {
+        left: -140px;
+    }
+
+    .recipes .mitten {
+        left: -45px;
+    }
+
+    .recipes .rolling-pin {
+        right: -190px;
+    }
+
+    .articles-big-hearth {
+        right: -70px;
+    }
+
+    .article-ring {
+        left: -35px;
+    }
+
+    .article-ring {
+        left: -40px;
+    }
+
+    .article-notepad {
+        right: -150px;
+    }
+
+    .article-cake {
+        left: -145px;
+    }
+}
+
+@media screen and (max-width: 1400px) {
+    .main-screen .dynamic-item.bagel {
+        right: -50px;
+        z-index: -1;
+    }
+    .main-screen .dynamic-item.big-hearth {
+        left: -50px;
+        z-index: -1;
+    }
+
+    .recipes .board {
+        right: -40px;
+    }
+
+    .recipes .croissant {
+        left: -60px;
+    }
+
+    .recipes .bun {
+        left: -80px;
+    }
+
+    .recipes .mitten {
+        left: -5px;
+    }
+
+    .recipes .rolling-pin {
+        right: -110px;
+    }
+
+    .articles-big-hearth {
+        right: -10px;
+    }
+
+    .article-ring {
+        left: -5px;
+        z-index:0;
+    }
+
+    .article-ring {
+        left: -5px;
+    }
+
+    .article-notepad {
+        right: -70px;
+    }
+
+    .article-cake {
+        left: -75px;
+    }
+}
+
+@media screen and (max-width: 1300px) {
+    .recipes .mitten {
+        display: none;
     }
 }
