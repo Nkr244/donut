@@ -774,9 +774,31 @@
     font-weight: 600;
     font-size: 15px;
     line-height: 10px;
-    text-align: right;
+    text-align: center;
     color: rgba(0, 0, 0, 0.8);
+    text-decoration: none;
+}
 
+.footer-contacts a svg {
+    margin-bottom: 20px;
+}
+
+.footer-logo-block {
+    margin-bottom: 20px;
+}
+
+.footer-logo-block p {
+    font-size: 15px;
+    line-height: 10px;
+    margin-bottom: 10px;
+}
+
+.footer-logo-block a {
+    font-size: 15px;
+    line-height: 10px;
+    font-weight: 600;
+    color: rgba(0, 0, 0, 0.8);
+    text-decoration: none;
 }
 
 .description-card-splide {
@@ -1129,6 +1151,23 @@ html {
 }
 
 @media screen and (max-width: 768px) {
+    .footer .footer-phone .email {
+        text-align: left !important;
+    }
+
+    .footer .footer-phone .email:before {
+        top: -4px;
+        left: -16% !important;
+    }
+
+    .footer-logo-block {
+        text-align: center;
+    }
+
+    .footer .footer-phone a {
+        font-size: 14px !important;
+        text-align: center !important;
+    }
 
     .to-buy .title {
         display: none;
@@ -3837,6 +3876,7 @@ input[type="range"]::-moz-range-thumb {
         right: -50px;
         z-index: -1;
     }
+
     .main-screen .dynamic-item.big-hearth {
         left: -50px;
         z-index: -1;
@@ -3868,7 +3908,7 @@ input[type="range"]::-moz-range-thumb {
 
     .article-ring {
         left: -5px;
-        z-index:0;
+        z-index: 0;
     }
 
     .article-ring {
@@ -3888,4 +3928,74 @@ input[type="range"]::-moz-range-thumb {
     .recipes .mitten {
         display: none;
     }
+}
+
+.email-modal {
+    visibility: hidden;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: 100%;
+    height: 100vh;
+    background: rgba(0, 0, 0, .5);
+    z-index: 1;
+    overflow-y: auto;
+}
+
+.email-modal-block {
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+    left: auto;
+    margin: 0 auto;
+    background: white;
+    padding: 40px 20px;
+    max-width: 905px;
+    border-radius: 20px;
+    transition: transform 2s;
+}
+
+.footer-phone span {
+    cursor: pointer;
+}
+
+.email-modal-block .title {
+    font-family: 'Tavolga', sans-serif;
+    font-size: 32px;
+    line-height: 36px;
+    margin-bottom: 20px;
+    font-weight: 700;
+    color: var(--brown);
+    text-transform: uppercase;
+}
+
+.email-close {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    width: 24px;
+    height: 24px;
+    cursor: pointer;
+}
+
+.email-modal.open {
+    visibility: visible;
+}
+.email-modal.open .email-modal-block{
+    transform: translateY(-50%);
+}
+
+@media screen and (max-width: 450px){
+    .footer .footer-phone .email:before {
+        top: -4px;
+        left: -21% !important;
+    }
+}
+@media screen and (max-width: 500px){
+   .email-modal-block {
+       height: 100%;
+       border-radius: 0;
+   }
 }

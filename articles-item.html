@@ -233,13 +233,70 @@
     <section class="footer">
         <div class="container">
             <div class="footer-content">
-                <img class="footer-logo" src="assets/img/logo.png" alt="лого подвала">
+                <div class="footer-logo-block">
+                    <img class="footer-logo" src="assets/img/logo.png" alt="лого подвала">
+                    <p>
+                        © 2024 АО «УК ЭФКО»
+                    </p>
+                    <a href="www.efko.ru">www.efko.ru</a>
+                </div>
+
                 <div class="footer-phone">
                     <p>
-                        По вопросам качества <br>
-                        <span>8-800 200-70-80</span> <br>
-                        (бесплатный звонок по России)
+                        Есть вопросы? Позвоните нам <br>
+                        <span><a class="tel" href="tel:8-800 200-70-80">8-800 200-70-80</a></span> <br>
+                        (бесплатный звонок по России) <br>
+                        <span onclick="openModalEmail()" class="email">или напишите</span>
                     </p>
+                    <div class="email-modal">
+                        <div class="email-modal-block">
+                            <svg class="email-close" width="48" height="48" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg">
+                                <path fill-rule="evenodd" clip-rule="evenodd" d="M4.11 2.697L2.698 4.11 6.586 8l-3.89 3.89 1.415 1.413L8 9.414l3.89 3.89 1.413-1.415L9.414 8l3.89-3.89-1.415-1.413L8 6.586l-3.89-3.89z" fill="#000"></path>
+                            </svg>
+                            <div class="contact-form">
+                                <p class="title">Задайте свой вопрос</p>
+                                <form>
+                                    <div class="form-block">
+                                        <label class="form-item">
+                                            <input type="text" name="">
+                                            <span class="title">Имя*</span>
+                                        </label>
+                                        <label class="form-item">
+                                            <input type="text" name="">
+                                            <span class="title">Фамилия*</span>
+                                        </label>
+                                    </div>
+                                    <div class="form-block">
+                                        <label class="form-item">
+                                            <input type="email" name="">
+                                            <span class="title">Электронная почта*</span>
+                                        </label>
+                                        <label class="form-item">
+                                            <input type="tel" name="">
+                                            <span class="title">Телефон</span>
+                                        </label>
+                                    </div>
+                                    <div class="form-block">
+                                        <label class="form-item form-item-textarea">
+                                            <textarea name="" cols="30" rows="4"></textarea>
+                                            <span class="title">Сообщение*</span>
+                                        </label>
+                                    </div>
+                                    <div class="form-block">
+                                        <div class="file-upload">
+                                            <label for="file-upload" class="custom-file-upload">
+                                                Прикрепить файл
+                                            </label>
+                                            <input id="file-upload" type="file" />
+                                        </div>
+                                    </div>
+                                    <button class="button-red" type="submit">отправить</button>
+                                    <p class="policy">Нажимая на кнопку «Отправить», вы даете согласие на обработку персональных данных</p>
+                                </form>
+                            </div>
+
+                        </div>
+                    </div>
                     <a class="vk-logo-mobile" href="#">
                         <svg width="60" height="60" viewBox="0 0 60 60" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <rect width="60" height="60" rx="30" fill="#FFC079"/>
@@ -247,8 +304,10 @@
                                   d="M44.3093 22.2079C44.5203 21.4974 44.3093 21 43.3245 21H40.0418C39.1977 21 38.8226 21.45 38.6115 21.9474C38.6115 21.9474 36.9468 26.0684 34.5786 28.7211C33.8048 29.5026 33.4766 29.7395 33.0545 29.7395C32.8435 29.7395 32.5387 29.5026 32.5387 28.7921V22.2079C32.5387 21.3553 32.3042 21 31.6008 21H26.4423C25.9265 21 25.5982 21.4026 25.5982 21.7579C25.5982 22.5632 26.7706 22.7526 26.9113 24.9789V29.8579C26.9113 30.9237 26.7237 31.1132 26.3017 31.1132C25.1996 31.1132 22.4797 26.9921 20.8853 22.2553C20.557 21.3789 20.2522 21 19.4081 21H16.1255C15.1876 21 15 21.45 15 21.9474C15 22.8237 16.102 27.1816 20.1819 32.9368C22.9018 36.8684 26.7237 39 30.1939 39C32.2807 39 32.5387 38.5263 32.5387 37.7211V34.7368C32.5387 33.7895 32.7262 33.6 33.4062 33.6C33.8986 33.6 34.7193 33.8368 36.6654 35.7316C38.8929 37.9816 39.2681 39 40.5108 39H43.7934C44.7313 39 45.2003 38.5263 44.9189 37.6026C44.6141 36.6789 43.559 35.3289 42.1521 33.7184C41.3783 32.7947 40.2294 31.8237 39.9012 31.3263C39.4088 30.6868 39.5494 30.4026 39.9012 29.8579C39.9012 29.8342 43.9107 24.15 44.3093 22.2079Z"
                                   fill="white"/>
                         </svg>
+                        <p>Подписывайтесь на нас</p>
                     </a>
                 </div>
+
                 <div class="footer-contacts">
                     <a class="vk-logo" href="#">
                         <svg width="60" height="60" viewBox="0 0 60 60" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -257,11 +316,8 @@
                                   d="M44.3093 22.2079C44.5203 21.4974 44.3093 21 43.3245 21H40.0418C39.1977 21 38.8226 21.45 38.6115 21.9474C38.6115 21.9474 36.9468 26.0684 34.5786 28.7211C33.8048 29.5026 33.4766 29.7395 33.0545 29.7395C32.8435 29.7395 32.5387 29.5026 32.5387 28.7921V22.2079C32.5387 21.3553 32.3042 21 31.6008 21H26.4423C25.9265 21 25.5982 21.4026 25.5982 21.7579C25.5982 22.5632 26.7706 22.7526 26.9113 24.9789V29.8579C26.9113 30.9237 26.7237 31.1132 26.3017 31.1132C25.1996 31.1132 22.4797 26.9921 20.8853 22.2553C20.557 21.3789 20.2522 21 19.4081 21H16.1255C15.1876 21 15 21.45 15 21.9474C15 22.8237 16.102 27.1816 20.1819 32.9368C22.9018 36.8684 26.7237 39 30.1939 39C32.2807 39 32.5387 38.5263 32.5387 37.7211V34.7368C32.5387 33.7895 32.7262 33.6 33.4062 33.6C33.8986 33.6 34.7193 33.8368 36.6654 35.7316C38.8929 37.9816 39.2681 39 40.5108 39H43.7934C44.7313 39 45.2003 38.5263 44.9189 37.6026C44.6141 36.6789 43.559 35.3289 42.1521 33.7184C41.3783 32.7947 40.2294 31.8237 39.9012 31.3263C39.4088 30.6868 39.5494 30.4026 39.9012 29.8579C39.9012 29.8342 43.9107 24.15 44.3093 22.2079Z"
                                   fill="white"/>
                         </svg>
+                        <p>Подписывайтесь на нас</p>
                     </a>
-                    <p>
-                        © 2024 АО «УК ЭФКО»
-                    </p>
-                    <a href="www.efko.ru">www.efko.ru</a>
                 </div>
             </div>
         </div>
@@ -319,6 +375,16 @@
         burgerMenu.addEventListener('click', () => {
             burgerMenu.toggleAttribute('open')
         })
+    })
+
+    const emailModal = document.querySelector('.email-modal')
+    const closeEmailModal = document.querySelector('.email-close')
+    const openModalEmail = () => {
+        emailModal.classList.add('open')
+    }
+
+    closeEmailModal.addEventListener('click', ()=> {
+        emailModal.classList.remove('open')
     })
 </script>
 </body>
